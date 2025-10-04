@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import pickle
+import os
 import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
@@ -54,6 +54,8 @@ y_pred = model.predict(X_val)
 rmse = root_mean_squared_error(y_val, y_pred)
 rmse = np.expm1(rmse)
 print("RMSE:", rmse)
+with open("metrics.txt", "w") as outfile:
+    outfile.write(f"RMSE: {rmse}")
 
 # Lưu model & DictVectorizer
 # with open("model.b", "wb") as f_out:
@@ -103,3 +105,4 @@ def plot_predictions(train_data, train_labels, test_data, test_labels, predictio
 # 6. Gọi hàm vẽ
 # =========================
 # plot_predictions(X_train, y_train, X_val, y_val, y_pred)
+
