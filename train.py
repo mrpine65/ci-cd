@@ -104,5 +104,6 @@ def plot_predictions(train_data, train_labels, test_data, test_labels, predictio
 # =========================
 # 6. Gọi hàm vẽ
 # =========================
-# plot_predictions(X_train, y_train, X_val, y_val, y_pred)
+plot_predictions(X_train, y_train, X_val, y_val, y_pred)
+
 
