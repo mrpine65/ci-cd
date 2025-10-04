@@ -14,13 +14,13 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - uses: iterative/setup-cml@v1
+      # - uses: iterative/setup-cml@v1
       - name: Check version python
         run: |
           # Your ML workflow goes here
           # pip install -r requirements.txt
           # python train.py
-          python --version
+          echo "Performance metric"
       # - name: Write CML report
       #   env:
       #     REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
