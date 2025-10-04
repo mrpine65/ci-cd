@@ -25,7 +25,6 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Post reports as comments in GitHub PRs
-          # cat results.txt >> report.md
-          echo "Performance metric" >> report.md
-          echo "rmsa : 0.3333" >> report.md
+          echo "## Performance Metric"
+          cat metrics.txt >> report.md
           cml comment create report.md
