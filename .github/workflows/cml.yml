@@ -27,4 +27,5 @@ jobs:
           # Post reports as comments in GitHub PRs
           echo "## Performance Metric"
           cat metrics.txt >> report.md
+          echo "![](./model_results.png)" >> report.md
           cml comment create report.md
